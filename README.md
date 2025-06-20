@@ -1,10 +1,10 @@
-# Unity NavMesh Cleaner
+# NavMesh Cleaner
 
 Open source version of deprecated [NavMesh Cleaner](https://assetstore.unity.com/packages/tools/behavior-ai/navmesh-cleaner-151501)
 
 ## Description
 
-NavMesh Cleaner is a script that will generate a mesh to cover unreachable NavMesh islands. Baking the NavMesh again will then mark these areas as inaccessible, rather than leaving unreachable spots in the NavMesh which helps to:
+NavMesh Cleaner is a script that will generate a mesh to cover unreachable NavMesh islands for Unity. Baking the NavMesh again will then mark these areas as inaccessible, rather than leaving unreachable spots in the NavMesh which helps to:
 
 1. Reduce NavMesh size
 2. Remove random movement bugs by having an incessible island specifed as the target (such as with Sample Position or on multi level structures)
