@@ -19,9 +19,6 @@ NavMesh Cleaner is a script that will generate a mesh to cover unreachable NavMe
 
 ### Installing
 
-- (Optional) For debug this uses https://github.com/JoebRogers/UnityDebug. If you don't wish to use this, just replace 'InternalDebug' with 'Debug'.
-InternalDebug provides a wrapper to help strip calls from builds.
-
 WIP
 
 ### Executing program
