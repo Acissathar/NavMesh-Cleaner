@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -227,56 +227,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13012942}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &25272606
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 25272608}
-  - component: {fileID: 25272607}
-  m_Layer: 0
-  m_Name: NavMeshCleaner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &25272607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25272606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95de629576cc3c14dae4f7d1b64ad4f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_WalkablePoint:
-  - {x: 7.3596687, y: 7.026594, z: -17.223917}
-  m_BakeWalkableMesh: 0
-  m_Height: 0.5
-  m_Offset: 0
-  m_MidLayerCount: 3
---- !u!4 &25272608
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25272606}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.964823, y: -7.526594, z: 9.271944}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &54002891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405263923}
   - component: {fileID: 1405263922}
+  - component: {fileID: 1405263924}
   m_Layer: 0
   m_Name: NavMesh Surface
   m_TagString: Untagged
@@ -1213,7 +1164,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: a5c302f6967745d4fabea4ae96761517, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8de99904dbd747d4bbe7bbd9fa0fe574, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1405263923
 Transform:
@@ -1230,6 +1181,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1405263924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405263921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95de629576cc3c14dae4f7d1b64ad4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkablePoints: []
+  generatedMeshHeight: 1
+  generatedMeshOffset: 0
+  midLayerCount: 3
+  generatedMeshMaterial: {fileID: 0}
+  generatedMeshNavMeshArea: 1
 --- !u!1 &1531738986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,5 +1748,4 @@ SceneRoots:
   - {fileID: 999794930}
   - {fileID: 54002893}
   - {fileID: 546858240}
-  - {fileID: 25272608}
   - {fileID: 1405263923}
