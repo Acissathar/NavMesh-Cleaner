@@ -1,0 +1,21 @@
+{
+  "name": "com.acissathar.navmeshcleaner",
+  "displayName": "NavMesh Cleaner",
+  "version": "1.0.0",
+  "unity": "6000.0",
+  "description": "Editor tool to generate a mesh on inaccessible NavMesh islands to allow for removal of these islands from rebaking the NavMesh Surface.",
+  "author": {
+	  "name":"Will B"
+	  "email":"acissathar@gmail.com"
+	  "url":"https://github.com/Acissathar/NavMesh-Cleaner/tree/main",
+  "dependencies": {
+    "com.unity.ai.navigation": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "NavMesh Cleaner Demo",
+      "description": "A demo scene to test editor functionality with various NavMesh islands.",
+      "path": "Samples~"
+    }
+  ]
+}
