@@ -63,7 +63,7 @@ Download repo, and copy the NavMeshCleaner.cs file into your Unity project to mo
 
 [@Acissathar](https://twitter.com/Acissathar)
 
-Project Link: [https://github.com/Acissathar/NavMesh-Cleaner](https://github.com/Acissathar/NavMesh-Cleaner)
+Project Link: [https://github.com/Acissathar/NavMesh-Cleaner/](https://github.com/Acissathar/NavMesh-Cleaner/)
 
 ## Version History
 
