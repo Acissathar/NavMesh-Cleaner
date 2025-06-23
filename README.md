@@ -67,6 +67,9 @@ Project Link: [https://github.com/Acissathar/NavMesh-Cleaner/](https://github.co
 
 ## Version History
 
+* 1.1
+    * Update to account for Physics Collider baking to respect Layer and add a Mesh Collider to generated mesh.
+
 * 1.0
     * Initial Release
 
