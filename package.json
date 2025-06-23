@@ -5,9 +5,10 @@
   "unity": "6000.0",
   "description": "Editor tool to generate a mesh on inaccessible NavMesh islands to allow for removal of these islands from rebaking the NavMesh Surface.",
   "author": {
-	  "name":"Will B"
-	  "email":"acissathar@gmail.com"
-	  "url":"https://github.com/Acissathar/NavMesh-Cleaner/tree/main",
+    "name": "Will B",
+    "email": "acissathar@gmail.com",
+    "url": "https://github.com/Acissathar/NavMesh-Cleaner/tree/main"
+  },
   "dependencies": {
     "com.unity.ai.navigation": "1.0.0"
   },
