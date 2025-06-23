@@ -21,7 +21,7 @@ NavMesh Cleaner is a script that will generate a mesh to cover unreachable NavMe
 
 ### Installing
 
-#Install via git URL
+#### Install via git URL
 
 In Packaage Manager, add https://github.com/Acissathar/NavMesh-Cleaner.git as a custom gitpackage.
 
@@ -31,13 +31,13 @@ In Packaage Manager, add https://github.com/Acissathar/NavMesh-Cleaner.git as a 
 
 A sample scene is provided in the package as well, but must be manually imported from the Package Manager dialogue.
 
-#Source
+#### Source
 
 Download repo, and copy the NavMeshCleaner.cs file into your Unity project to modify directly.
 
 ### Executing program
 
-#Quick Start
+#### Quick Start
 
 * Bake a NavMesh Surface using the NavMesh Surface component from Unity's AI Navigation package.
 * Add a NavMesh Cleaner component to the object holding your NavMesh Surface.
@@ -49,7 +49,7 @@ Download repo, and copy the NavMeshCleaner.cs file into your Unity project to mo
 * Click Hide or Remove Mesh.
 * Verify your islands are now gone!
 
-# Visual Walkthrough
+#### Visual Walkthrough
 
 * ![image](https://github.com/user-attachments/assets/948ff1f8-ffe5-4b89-a590-08d46ef4309b)
 
