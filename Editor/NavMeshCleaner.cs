@@ -59,6 +59,11 @@ namespace NavMesh_Cleaner.Editor
         private void Build(bool bakeWalkableMesh)
         {
             var createdMesh = CreateMesh(bakeWalkableMesh);
+            
+            if (!TryGetComponent(out NavMeshSurface surface))
+            {
+                surface = FindFirstObjectByType<NavMeshSurface>();
+            }
 
             Undo.RegisterCreatedObjectUndo(this, "build");
 
@@ -100,6 +105,21 @@ namespace NavMesh_Cleaner.Editor
                 var meshFilter = _childObjects[i].GetComponent<MeshFilter>();
                 Undo.RecordObject(meshFilter, "MeshUpdate");
                 meshFilter.sharedMesh = createdMesh.Length == 0 ? null : createdMesh[i];
+
+                if(surface) 
+                {
+                    if (surface.useGeometry == NavMeshCollectGeometry.PhysicsColliders)
+                    {
+                        if (!TryGetComponent(out MeshCollider meshCollider))
+                        {
+                            meshCollider = newObject.AddComponent<MeshCollider>();
+                        }
+
+                        meshCollider.sharedMesh = meshFilter.sharedMesh;
+                    }
+                    
+                    newObject.layer = Mathf.RoundToInt(Mathf.Log(surface.layerMask, 2));  
+                }
             }
 
             while (_childObjects.Count > createdMesh.Length)
@@ -177,15 +197,20 @@ namespace NavMesh_Cleaner.Editor
             {
                 table[i] = Find(v, 0, vertices.Count, navVertices[i], navVertices[i].x - 0.001f);
                 if (i % 100 == 0)
+                {
                     EditorUtility.DisplayProgressBar($"Export Nav-Mesh (Phase #1/3) {i}/{table.Length}", "Weld Vertex",
                         Mathf.InverseLerp(0, table.Length, i));
+                }
             }
 
             var navTriangles = triangulatedNavMesh.indices;
 
             var tri = new List<Tri>();
             for (var i = 0; i < navTriangles.Length; i += 3)
+            {
                 tri.Add(new Tri(table[navTriangles[i + 0]], table[navTriangles[i + 1]], table[navTriangles[i + 2]]));
+            }
+
             tri.Sort((t1, t2) => t1.Min == t2.Min ? 0 : t1.Min < t2.Min ? -1 : 1);
 
             var boundMin = new int[(tri.Count + 127) / 128];
@@ -227,18 +252,26 @@ namespace NavMesh_Cleaner.Editor
                 for (int b = 0, c = 0; b < i; b += 3 * 128, c++)
                 {
                     if (boundMin[c] > max || boundMan[c] < min)
+                    {
                         continue;
+                    }
 
                     for (var j = b; j < i && j < b + 3 * 128; j += 3)
                     {
                         if (tri[j / 3].Min > max)
+                        {
                             break;
+                        }
 
                         if (tri[j / 3].Max < min)
+                        {
                             continue;
+                        }
 
                         if (groundIndex[group[j / 3]] == groupID)
+                        {
                             continue;
+                        }
 
                         for (var k = 0; k < 3; k++)
                         {
@@ -256,7 +289,9 @@ namespace NavMesh_Cleaner.Editor
                                     for (var l = 0; l < groundIndex.Count; l++)
                                     {
                                         if (groundIndex[l] == currentGround)
+                                        {
                                             groundIndex[l] = groupID;
+                                        }
                                     }
                                 }
 

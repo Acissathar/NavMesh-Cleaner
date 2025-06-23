@@ -1,7 +1,7 @@
 {
   "name": "com.acissathar.navmeshcleaner",
   "displayName": "NavMesh Cleaner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "unity": "6000.0",
   "description": "Editor tool to generate a mesh on inaccessible NavMesh islands to allow for removal of these islands from rebaking the NavMesh Surface.",
   "author": {
