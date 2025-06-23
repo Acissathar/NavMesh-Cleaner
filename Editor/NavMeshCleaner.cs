@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace NavMesh_Cleaner.Script
+namespace NavMesh_Cleaner.Editor
 {
     public class NavMeshCleaner : MonoBehaviour
     {
@@ -603,7 +603,7 @@ namespace NavMesh_Cleaner.Script
         }
 
         [CustomEditor(typeof(NavMeshCleaner))]
-        public class NavMeshCleanerEditor : Editor
+        public class NavMeshCleanerEditor : UnityEditor.Editor
         {
             private const float Epsilon = 0.000001f;
 
