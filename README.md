@@ -23,7 +23,7 @@ NavMesh Cleaner is a script that will generate a mesh to cover unreachable NavMe
 
 #### Install via git URL
 
-In Packaage Manager, add https://github.com/Acissathar/NavMesh-Cleaner.git as a custom gitpackage.
+In Package Manager, add https://github.com/Acissathar/NavMesh-Cleaner.git as a custom gitpackage.
 
 ![image](https://github.com/user-attachments/assets/eb88d6e1-4910-487c-93e6-82f4e274dc1a)
 
